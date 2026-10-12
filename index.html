@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f7f8fa">
+<meta name="description" content="Shiva Paswan's Excel and data portfolio: spreadsheet projects, data cleaning, reports and practical Excel solutions.">
+<title>Shiva Paswan — Excel & Data Portfolio</title>
+<style>
+:root{--orange:#f47b20;--ink:#151d2e;--muted:#77808d;--line:#e6e8ec;--paper:#f7f8fa;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,"Segoe UI",Arial,sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1100px,91%);margin:auto}
+header{height:68px;background:rgba(255,255,255,.92);border-bottom:1px solid #eceef1;position:sticky;top:0;z-index:10;backdrop-filter:blur(12px)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:9px;font-weight:800;font-size:17px;letter-spacing:-.5px}.brandmark{height:34px;width:34px;border-radius:50%;display:grid;place-items:center;background:var(--orange);color:#fff;font-size:19px}.links{display:flex;align-items:center;gap:28px;font-size:12px;color:#596171}.links a:hover{color:var(--orange)}.btn{border:0;border-radius:9px;padding:12px 22px;display:inline-flex;justify-content:center;align-items:center;gap:8px;font-weight:700;font-size:13px;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--orange);color:#fff;box-shadow:0 5px 14px #f47b2024}.outline{border:1px solid var(--line);background:#fff;color:var(--ink)}.menu{display:none;background:none;border:0;font-size:24px}
+.hero{min-height:620px;display:flex;align-items:center;text-align:center;padding:65px 0 95px;background:radial-gradient(ellipse at 50% 30%,#fff 0, #f7f8fa 68%)}.hero-inner{max-width:850px;margin:auto}.availability{display:inline-flex;align-items:center;border:1px solid #f3dfcf;background:#fff8f1;color:#c66b22;border-radius:25px;padding:5px 13px;font-size:11px;margin-bottom:25px}.hero h1{font-size:clamp(42px,7.2vw,78px);line-height:1.02;letter-spacing:-3.8px;margin:0 0 24px;font-weight:800}.hero h1 em{display:block;color:var(--orange);font-style:italic;font-weight:650}.hero p{max-width:660px;margin:0 auto;color:#7c8490;font-size:16px;line-height:1.65}.skill-pills{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:28px 0 36px}.pill{background:#fff;border:1px solid #eceef1;border-radius:24px;padding:7px 13px;font-size:11px;font-weight:700;box-shadow:0 2px 7px #202b3d05}.pill b{color:var(--orange);margin-right:6px}.hero-actions{display:flex;justify-content:center;gap:13px;flex-wrap:wrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-1px;padding-bottom:35px}.stat{background:rgba(255,255,255,.75);border:1px solid #e5e7eb;border-radius:13px;padding:22px 17px;display:flex;align-items:center;gap:15px;min-height:94px;box-shadow:0 4px 12px #15203305}.stat-icon{height:47px;width:47px;flex-shrink:0;display:grid;place-items:center;border-radius:12px;background:#fff1e6;color:var(--orange);font-size:21px}.stat strong{display:block;font-size:25px;line-height:1.2;letter-spacing:-.8px}.stat span{display:block;color:#77808d;font-size:10px;font-weight:800;letter-spacing:.35px;margin-top:4px}
+section.content{padding:78px 0}.section-head{text-align:center;max-width:640px;margin:0 auto 35px}.eyebrow{color:var(--orange);font-size:11px;letter-spacing:1.8px;font-weight:800;text-transform:uppercase}.section-head h2{font-size:clamp(28px,4vw,40px);letter-spacing:-1.2px;line-height:1.2;margin:9px 0 12px}.section-head p,.muted{color:var(--muted)}.section-head p{margin:0;font-size:14px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:19px}.card{background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);box-shadow:0 14px 30px #18243a0b}.service{padding:25px}.service-icon{height:44px;width:44px;border-radius:12px;display:grid;place-items:center;background:#fff1e6;color:var(--orange);font-size:22px;margin-bottom:17px}.card h3{font-size:17px;margin:0 0 8px}.card p{font-size:13px;color:var(--muted);margin:0}.portfolio{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:22px}.toolbar input{padding:11px 13px;border:1px solid var(--line);border-radius:8px;min-width:220px;outline:none}.filters{display:flex;gap:7px;flex-wrap:wrap}.filter{padding:8px 12px;background:#fff;border:1px solid var(--line);border-radius:7px;font-size:11px;cursor:pointer}.filter.active{background:var(--ink);color:#fff;border-color:var(--ink)}.project-cover{height:160px;padding:20px;display:grid;place-items:center;background:linear-gradient(135deg,#fff7ef,#f6f8fb)}.sheet{width:90%;max-width:270px;background:#fff;padding:12px;border-radius:5px;box-shadow:0 8px 25px #202b3d0c}.sheet-title{font-size:11px;font-weight:800;color:#394456;margin-bottom:8px}.sheet-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-bottom:4px}.sheet-row span{height:14px;background:#eef1f4;border-radius:2px}.sheet-row:first-of-type span{background:#f9cda9}.project-body{padding:19px}.category{color:var(--orange);font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:800}.project-body h3{margin:6px 0;font-size:17px}.project-body p{font-size:12px;color:var(--muted);margin:0 0 13px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:15px}.tag{font-size:10px;background:#f4f5f7;padding:4px 8px;border-radius:5px}.project-actions{display:flex;gap:8px;flex-wrap:wrap}.project-actions .btn{font-size:11px;padding:8px 12px}.note{font-size:10px!important;margin-top:10px!important}.empty{text-align:center;grid-column:1/-1;padding:30px;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{background:#fff;border:1px solid var(--line);border-top:3px solid var(--orange);border-radius:5px 5px 12px 12px;padding:20px}.step .num{color:#f4bb8f;font-size:27px;font-weight:800}.step h3{margin:5px 0;font-size:15px}.step p{font-size:12px;color:var(--muted);margin:0}.about{background:#fff8f2}.about-grid{display:grid;grid-template-columns:.65fr 1.35fr;align-items:center;gap:48px}.monogram{height:240px;border-radius:17px;background:var(--orange);color:white;display:grid;place-items:center;font-size:72px;font-weight:850;letter-spacing:-5px}.about h2{font-size:34px;letter-spacing:-1px;line-height:1.2;margin:8px 0 16px}.about p{color:var(--muted);font-size:14px}.tags-list{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.tags-list span{background:#fff;border:1px solid #f0e3d8;padding:6px 10px;border-radius:7px;font-size:11px;font-weight:700}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}.contact-grid h2{font-size:35px;letter-spacing:-1px;line-height:1.2;margin:10px 0 15px}.contact-grid p{font-size:14px;color:var(--muted)}.contact-form{background:#fff;border:1px solid var(--line);border-radius:14px;padding:25px}.row{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{margin-bottom:14px}.field label{display:block;font-size:11px;font-weight:800;margin-bottom:6px}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:8px;padding:11px;outline:none;background:white}.field textarea{min-height:105px;resize:vertical}.small{font-size:11px!important;margin-top:10px}footer{background:#fff;border-top:1px solid var(--line);padding:27px 0}.foot{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.foot p{font-size:11px;color:var(--muted);margin:0}.foot-links{display:flex;gap:17px;font-size:11px;color:#667080}.admin-btn{position:fixed;right:15px;bottom:15px;background:var(--ink);color:white;border:0;border-radius:30px;padding:11px 15px;font-size:11px;font-weight:800;box-shadow:0 5px 20px #0002;z-index:15}.modal{display:none;position:fixed;inset:0;z-index:30;background:#101827aa;padding:18px;overflow:auto}.modal.show{display:block}.modal-box{width:min(700px,100%);margin:25px auto;background:#fff;border-radius:14px;padding:24px}.modal-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}.warning{background:#fff5e6;color:#8a561d;border-radius:8px;padding:11px;font-size:11px;margin-bottom:16px}.admin-list{display:grid;gap:9px;margin-top:18px}.admin-item{border:1px solid var(--line);border-radius:8px;padding:11px;display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}.admin-item p{font-size:11px;color:var(--muted);margin:2px 0}.hidden{display:none!important}
+@media(max-width:800px){.links{gap:15px}.links a{font-size:11px}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:repeat(2,1fr)}.about-grid{gap:25px}.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){header{height:62px}.menu{display:block}.links{display:none;position:absolute;top:62px;left:0;right:0;background:#fff;padding:18px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{font-size:13px}.hero{min-height:560px;padding:60px 0 80px}.hero h1{font-size:48px;letter-spacing:-2.5px}.hero p{font-size:14px}.stats{gap:9px}.stat{padding:13px 10px;gap:9px;min-height:78px}.stat-icon{height:37px;width:37px;font-size:17px}.stat strong{font-size:21px}.stat span{font-size:8px}.cards,.steps,.about-grid,.contact-grid{grid-template-columns:1fr}.monogram{height:160px}.row{grid-template-columns:1fr;gap:0}.contact-form{padding:18px}.toolbar input{width:100%}.filters{width:100%}.filter{flex:1}.section.content,section.content{padding:58px 0}.about h2,.contact-grid h2{font-size:29px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#home"><span class="brandmark">▥</span><span>Shiva<span style="font-weight:500">Portfolio</span></span></a>
+<button class="menu" id="menu" aria-label="Open navigation">☰</button>
+<nav class="links" id="links"><a href="#portfolio">Projects</a><a href="#services">Compétences</a><a href="#about">Expérience</a><a href="#contact">Contact</a><a class="btn primary" href="#contact">Me Contacter</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-inner">
+<div class="availability">● Available for beginner-friendly projects</div>
+<h1>Excel Freelancer &amp;<em>Data Storyteller</em></h1>
+<p>I turn messy spreadsheets into organized data, clear reports and useful insights that help people work smarter.</p>
+<div class="skill-pills"><span class="pill"><b>▦</b> Microsoft Excel</span><span class="pill"><b>▤</b> Data Cleaning</span><span class="pill"><b>▥</b> Reports &amp; Charts</span></div>
+<div class="hero-actions"><a class="btn primary" href="#portfolio">View My Projects&nbsp; →</a><a class="btn outline" href="#contact">Contact Me</a></div>
+</div></section>
+<div class="wrap stats">
+<div class="stat"><div class="stat-icon">▣</div><div><strong id="statProjects">03</strong><span>PORTFOLIO SAMPLES</span></div></div>
+<div class="stat"><div class="stat-icon">▤</div><div><strong>Excel</strong><span>SPREADSHEET TOOLS</span></div></div>
+<div class="stat"><div class="stat-icon">♧</div><div><strong>100%</strong><span>HONEST PORTFOLIO</span></div></div>
+<div class="stat"><div class="stat-icon">✉</div><div><strong>Direct</strong><span>CLIENT COMMUNICATION</span></div></div>
+</div>
+<section class="content" id="services"><div class="wrap"><div class="section-head"><div class="eyebrow">What I can do</div><h2>Skills &amp; Services</h2><p>Practical spreadsheet support for day-to-day data and reporting tasks.</p></div>
+<div class="cards">
+<article class="card service"><div class="service-icon">⌕</div><h3>Data Cleaning</h3><p>Organize messy data, remove duplicates and standardize formats.</p></article>
+<article class="card service"><div class="service-icon">▤</div><h3>Data Entry</h3><p>Enter, structure and arrange information in clear spreadsheets.</p></article>
+<article class="card service"><div class="service-icon">✧</div><h3>Excel Formatting</h3><p>Make worksheets consistent, readable and easier to use.</p></article>
+<article class="card service"><div class="service-icon">∑</div><h3>Excel Formulas</h3><p>Build calculations using formulas appropriate to the task.</p></article>
+<article class="card service"><div class="service-icon">▥</div><h3>Reports &amp; Charts</h3><p>Summarize data visually with useful charts and reports.</p></article>
+<article class="card service"><div class="service-icon">⇩</div><h3>PDF / CSV to Excel</h3><p>Convert accessible tabular data into structured spreadsheets.</p></article>
+</div></div></section>
+<section class="content portfolio" id="portfolio"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Featured Projects</h2><p>Practice projects that show the kind of spreadsheet solutions I can build.</p></div>
+<div class="toolbar"><input id="search" type="search" placeholder="Search projects..." aria-label="Search projects"><div class="filters"><button class="filter active" data-filter="All">All projects</button><button class="filter" data-filter="Reports">Reports</button><button class="filter" data-filter="Data Cleaning">Data Cleaning</button><button class="filter" data-filter="Management">Management</button></div></div>
+<div class="cards" id="projectGrid"></div><p class="small muted">Sample figures and previews are illustrative. Replace them with your own completed work before pitching clients.</p>
+</div></section>
+<section class="content"><div class="wrap"><div class="section-head"><div class="eyebrow">Simple workflow</div><h2>How I Work</h2><p>Clear expectations, practical work and agreed deliverables.</p></div><div class="steps">
+<div class="step"><div class="num">01</div><h3>Understand</h3><p>Discuss the problem and the result you need.</p></div><div class="step"><div class="num">02</div><h3>Plan</h3><p>Confirm scope, timeline and deliverables.</p></div><div class="step"><div class="num">03</div><h3>Organize</h3><p>Clean, structure or analyze the supplied data.</p></div><div class="step"><div class="num">04</div><h3>Deliver</h3><p>Review the result and deliver the agreed files.</p></div>
+</div></div></section>
+<section class="content about" id="about"><div class="wrap about-grid"><div class="monogram">SP</div><div><div class="eyebrow">A little about me</div><h2>Hi, I'm Shiva Paswan.</h2><p>I'm building my freelance career around Excel, spreadsheet organization and practical data tasks. I focus on clear communication, careful formatting and work that matches the agreed requirements.</p><p>I'm growing my portfolio through practice projects and continuously improving my skills. The projects shown here should be treated as samples unless explicitly identified otherwise.</p><div class="tags-list"><span>Microsoft Excel</span><span>Data Entry</span><span>Formatting</span><span>Basic Formulas</span><span>Data Organization</span></div></div></div></section>
+<section class="content" id="contact"><div class="wrap contact-grid"><div><div class="eyebrow">Let's connect</div><h2>Have an Excel task?</h2><p>Share what you need, the file format and your expected result. We can discuss the scope and next steps.</p><p style="margin-top:20px">✉ <strong>Email:</strong> <span id="emailLabel">Set your email in the code</span></p><p>◷ <strong>Response:</strong> After you receive the inquiry by email</p></div>
+<form class="contact-form" id="contactForm"><div class="row"><div class="field"><label for="name">Your name *</label><input id="name" required maxlength="100" placeholder="Name"></div><div class="field"><label for="email">Your email *</label><input id="email" type="email" required maxlength="150" placeholder="you@example.com"></div></div>
+<div class="field"><label for="service">Service needed *</label><select id="service" required><option value="">Choose a service</option><option>Data Cleaning</option><option>Data Entry</option><option>Excel Formatting</option><option>Excel Formulas</option><option>Reports & Charts</option><option>PDF / CSV to Excel</option><option>Other</option></select></div>
+<div class="field"><label for="details">Project details *</label><textarea id="details" required maxlength="3000" placeholder="What do you need done?"></textarea></div>
+<button class="btn primary" type="submit">Prepare Email Inquiry →</button><p class="small" id="formStatus">This form opens your email app; it does not send messages directly from the website.</p></form></div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>Shiva Portfolio</strong><p>Excel &amp; Data Projects · <span id="year"></span></p></div><div class="foot-links"><a href="#home">Home</a><a href="#portfolio">Projects</a><a href="#contact">Contact</a></div><p>Built with HTML, CSS &amp; JavaScript</p></div></footer>
+<button class="admin-btn" id="adminOpen">⚙ Manage Projects</button>
+<div class="modal" id="adminModal"><div class="modal-box"><div class="modal-top"><div><div class="eyebrow">Local demo manager</div><h2>Manage portfolio projects</h2></div><button class="btn outline" id="adminClose">Close ✕</button></div>
+<div class="warning">Secure mode requires a configured Supabase project and database policies. Public users cannot write projects. Never put a service-role key in this page.</div>
+<div id="authPanel">
+  <form id="loginForm">
+    <div class="field"><label for="adminEmail">Admin email</label><input id="adminEmail" type="email" autocomplete="username" required></div>
+    <div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" autocomplete="current-password" required minlength="8"></div>
+    <button class="btn primary" type="submit">Sign in securely</button>
+    <button class="btn outline" id="logoutBtn" type="button">Sign out</button>
+    <p class="small" id="authStatus">Sign in with an account created in Supabase and explicitly added to the admin allowlist.</p>
+  </form>
+</div>
+<div id="secureEditor" class="hidden">
+<form id="projectForm"><input id="projectId" type="hidden"><div class="row"><div class="field"><label for="title">Project title *</label><input id="title" required maxlength="100"></div><div class="field"><label for="category">Category</label><select id="category"><option>Reports</option><option>Data Cleaning</option><option>Management</option></select></div></div><div class="field"><label for="description">Description *</label><textarea id="description" required maxlength="1000"></textarea></div><div class="field"><label for="tags">Skills (comma separated)</label><input id="tags" maxlength="250" placeholder="SUM, Formatting, Charts"></div><div class="field"><label for="file">Excel / CSV / PDF sample</label><input id="file" type="file" accept=".xlsx,.xls,.csv,.pdf"></div><div class="field"><label><input id="published" type="checkbox" checked style="width:auto"> Published publicly</label></div><button class="btn primary">Save Project</button><button type="button" class="btn outline" id="cancelEdit">Cancel edit</button><p id="adminStatus" class="small"></p></form><div class="admin-list" id="adminList"></div>
+</div></div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+/* Configure Supabase URL + publishable/anon key below. Never put service_role keys here. */
+const CONFIG={
+  email:"shivapaswan4561@gmail.com",
+  supabaseUrl:"https://bnennlixfqqtckxbnjjw.supabase.co",
+  supabaseAnonKey:"sb_publishable_HzlCdJyT8PD0q2QmwPgN5g_RsYQQ6k1"
+};
+const demos=[
+{id:"demo-sales",title:"Monthly Sales Report",category:"Reports",description:"Practice project concept for monthly sales totals, summaries and reporting.",tags:["SUM","Formatting","Reports"],demo:true},
+{id:"demo-clean",title:"Data Cleaning Sample",category:"Data Cleaning",description:"Practice example for consistent formatting and organizing spreadsheet records.",tags:["Cleaning","Formatting"],demo:true},
+{id:"demo-expense",title:"Expense Tracker",category:"Management",description:"Practice spreadsheet concept for tracking categories and calculating expenses.",tags:["SUMIF","Categories"],demo:true}
+];
+
+const KEY="shiva_portfolio_secure_v1";
+let projects=[], filter="All", supabaseClient=null, currentAdmin=null;
+
+function esc(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function preview(){return '<div class="sheet"><div class="sheet-title">SPREADSHEET PREVIEW</div>'+Array.from({length:5},()=>'<div class="sheet-row"><span></span><span></span><span></span></div>').join("")+'</div>'}
+function render(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const list=projects.filter(p=>(filter==="All"||p.category===filter)&&[p.title,p.description,p.category,...(p.tags||[])].join(" ").toLowerCase().includes(q));
+ document.getElementById("projectGrid").innerHTML=list.length?list.map(p=>'<article class="card"><div class="project-cover">'+preview()+'</div><div class="project-body"><span class="category">'+esc(p.category)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.description)+'</p><div class="tags">'+(p.tags||[]).map(t=>'<span class="tag">'+esc(t)+'</span>').join("")+'</div><div class="project-actions">'+(p.file_url?'<a class="btn primary" href="'+esc(p.file_url)+'" target="_blank" rel="noopener">Download sample</a>':'<button class="btn outline" data-detail="'+esc(p.id)+'">View details</button>')+'</div><p class="note">'+(p.demo?"Practice project":"Portfolio project")+'</p></div></article>').join(""):'<div class="empty">No published projects found.</div>';
+ document.getElementById("statProjects").textContent=String(list.length).padStart(2,"0");
+}
+function setStatus(id,msg){const el=document.getElementById(id);if(el)el.textContent=msg}
+function setupClient(){
+ if(!window.supabase || CONFIG.supabaseUrl.includes("YOUR-PROJECT") || CONFIG.supabaseAnonKey.includes("YOUR_SUPABASE")){
+   setStatus("authStatus","Setup required: add your Supabase project URL and publishable/anon key in CONFIG.");
+   return false;
+ }
+ supabaseClient=window.supabase.createClient(CONFIG.supabaseUrl,CONFIG.supabaseAnonKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true}});
+ return true;
+}
+async function loadPublicProjects(){
+ if(!supabaseClient){projects=demos.map(p=>({...p}));render();return}
+ const {data,error}=await supabaseClient.from("portfolio_projects").select("id,title,category,description,tags,file_path,published").eq("published",true).order("created_at",{ascending:false});
+ if(error){console.error(error);projects=demos.map(p=>({...p}));setStatus("authStatus","Database not configured yet. Showing sample projects.");render();return}
+ projects=(data||[]).map(p=>({...p,demo:false,file_url:p.file_path?null:null}));
+ // Generate temporary public download URLs only for files in the public portfolio bucket.
+ for(const p of projects){if(p.file_path){const {data:pub}=supabaseClient.storage.from("portfolio-files").getPublicUrl(p.file_path);p.file_url=pub?.publicUrl||null}}
+ render();
+}
+async function checkAdmin(){
+ if(!supabaseClient)return false;
+ const {data:{user}}=await supabaseClient.auth.getUser();
+ if(!user){currentAdmin=null;document.getElementById("secureEditor").classList.add("hidden");setStatus("authStatus","Not signed in.");return false}
+ const {data,error}=await supabaseClient.from("portfolio_admins").select("user_id").eq("user_id",user.id).maybeSingle();
+ if(error||!data){currentAdmin=null;document.getElementById("secureEditor").classList.add("hidden");setStatus("authStatus","This account is not authorized as an admin.");return false}
+ currentAdmin=user;document.getElementById("secureEditor").classList.remove("hidden");setStatus("authStatus","Signed in as authorized admin: "+user.email);await loadAdminProjects();return true;
+}
+async function loadAdminProjects(){
+ if(!currentAdmin)return;
+ const {data,error}=await supabaseClient.from("portfolio_projects").select("*").order("created_at",{ascending:false});
+ if(error){setStatus("adminStatus","Could not load projects. Check database policies.");return}
+ const list=document.getElementById("adminList");
+ list.innerHTML=(data||[]).map(p=>'<div class="admin-item"><div><strong>'+esc(p.title)+'</strong><p>'+esc(p.category)+' · '+(p.published?'Published':'Draft')+(p.file_path?' · File attached':'')+'</p></div><div><button class="btn outline" data-edit="'+esc(p.id)+'">Edit</button> <button class="btn outline" data-delete="'+esc(p.id)+'">Delete</button></div></div>').join("")||"<p>No projects yet.</p>";
+}
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));b.classList.add("active");filter=b.dataset.filter;render()}));
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("projectGrid").addEventListener("click",e=>{const b=e.target.closest("[data-detail]");if(!b)return;const p=projects.find(x=>String(x.id)===String(b.dataset.detail));if(p)alert(p.title+"\n\n"+p.description+"\n\nCategory: "+p.category+"\nSkills: "+(p.tags||[]).join(", "))});
+document.getElementById("menu").addEventListener("click",()=>document.getElementById("links").classList.toggle("open"));
+document.querySelectorAll("#links a").forEach(a=>a.addEventListener("click",()=>document.getElementById("links").classList.remove("open")));
+document.getElementById("contactForm").addEventListener("submit",e=>{e.preventDefault();if(CONFIG.email==="YOUR_EMAIL@example.com"){setStatus("formStatus","Set CONFIG.email in the code before using this form.");return}const body=encodeURIComponent("Name: "+document.getElementById("name").value+"\nEmail: "+document.getElementById("email").value+"\nService: "+document.getElementById("service").value+"\n\nDetails:\n"+document.getElementById("details").value);location.href="mailto:"+CONFIG.email+"?subject="+encodeURIComponent("Excel project inquiry")+"&body="+body;setStatus("formStatus","Your email app should open. Review and send the message there.")});
+const modal=document.getElementById("adminModal");
+document.getElementById("adminOpen").onclick=async()=>{modal.classList.add("show");if(supabaseClient)await checkAdmin()};
+document.getElementById("adminClose").onclick=()=>modal.classList.remove("show");
+modal.addEventListener("click",e=>{if(e.target===modal)modal.classList.remove("show")});
+document.getElementById("loginForm").addEventListener("submit",async e=>{e.preventDefault();if(!supabaseClient){setupClient();return}setStatus("authStatus","Signing in…");const email=document.getElementById("adminEmail").value.trim();const password=document.getElementById("adminPassword").value;const {error}=await supabaseClient.auth.signInWithPassword({email,password});if(error){setStatus("authStatus","Login failed. Check credentials and Supabase Auth settings.");return}const ok=await checkAdmin();if(ok)await loadPublicProjects()});
+document.getElementById("logoutBtn").addEventListener("click",async()=>{if(supabaseClient)await supabaseClient.auth.signOut();currentAdmin=null;document.getElementById("secureEditor").classList.add("hidden");setStatus("authStatus","Signed out.");await loadPublicProjects()});
+function resetForm(){document.getElementById("projectForm").reset();document.getElementById("projectId").value=""}
+document.getElementById("projectForm").addEventListener("submit",async e=>{
+ e.preventDefault();if(!currentAdmin){setStatus("adminStatus","Sign in as an authorized admin first.");return}
+ const id=document.getElementById("projectId").value;const file=document.getElementById("file").files[0];let file_path=null;
+ const payload={title:document.getElementById("title").value.trim(),category:document.getElementById("category").value,description:document.getElementById("description").value.trim(),tags:document.getElementById("tags").value.split(",").map(x=>x.trim()).filter(Boolean),published:document.getElementById("published").checked};
+ if(file){
+   if(file.size>10*1024*1024){setStatus("adminStatus","File exceeds 10 MB limit.");return}
+   if(!/\.(xlsx|xls|csv|pdf)$/i.test(file.name)){setStatus("adminStatus","Only XLSX, XLS, CSV and PDF files are allowed.");return}
+   const safeName=file.name.replace(/[^a-zA-Z0-9._-]/g,"_");file_path=currentAdmin.id+"/"+crypto.randomUUID()+"-"+safeName;
+   const {error:uploadError}=await supabaseClient.storage.from("portfolio-files").upload(file_path,file,{upsert:false,contentType:file.type||"application/octet-stream"});
+   if(uploadError){setStatus("adminStatus","Upload failed. Verify storage bucket and admin-only storage policies.");return}
+   payload.file_path=file_path;
+ }else if(id){const old=projects.find(p=>String(p.id)===String(id));if(old?.file_path)payload.file_path=old.file_path}
+ setStatus("adminStatus","Saving…");
+ let result;
+ if(id)result=await supabaseClient.from("portfolio_projects").update(payload).eq("id",id).select().single();
+ else result=await supabaseClient.from("portfolio_projects").insert(payload).select().single();
+ if(result.error){setStatus("adminStatus","Save failed. Check RLS policies. "+result.error.message);return}
+ resetForm();await loadAdminProjects();await loadPublicProjects();setStatus("adminStatus","Project saved securely.");
+});
+document.getElementById("adminList").addEventListener("click",async e=>{
+ const edit=e.target.closest("[data-edit]"),del=e.target.closest("[data-delete]");
+ if(edit){const {data,error}=await supabaseClient.from("portfolio_projects").select("*").eq("id",edit.dataset.edit).single();if(error||!data)return;document.getElementById("projectId").value=data.id;document.getElementById("title").value=data.title;document.getElementById("category").value=data.category;document.getElementById("description").value=data.description;document.getElementById("tags").value=(data.tags||[]).join(", ");document.getElementById("published").checked=!!data.published;setStatus("adminStatus","Editing project. A newly selected file uploads as a new file.");}
+ if(del){if(!currentAdmin||!confirm("Delete this project?"))return;const {error}=await supabaseClient.from("portfolio_projects").delete().eq("id",del.dataset.delete);if(error){setStatus("adminStatus","Delete failed. Check RLS policies.");return}await loadAdminProjects();await loadPublicProjects();setStatus("adminStatus","Project deleted.");}
+});
+document.getElementById("cancelEdit").onclick=resetForm;
+document.getElementById("emailLabel").textContent=CONFIG.email==="YOUR_EMAIL@example.com"?"Set your email in the code":CONFIG.email;
+document.getElementById("year").textContent=new Date().getFullYear();
+if(setupClient()){supabaseClient.auth.onAuthStateChange(()=>{setTimeout(()=>checkAdmin(),0)});loadPublicProjects()}else{projects=demos.map(p=>({...p}));render()}
+
+</script>
+</body>
+</html>
