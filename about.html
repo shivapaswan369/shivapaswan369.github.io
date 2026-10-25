@@ -3,13 +3,108 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | Shiva Paswan</title>
-  <meta name="description" content="Learn about Shiva Paswan, his Excel skills, data projects, and portfolio.">
+  <meta name="description" content="Learn about Shiva Paswan, his Excel skills, data projects, and professional journey.">
+  <title>About Me | Shiva Portfolio</title>
+  <link rel="icon" href="favicon.png">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f7f9;
+      color: #182235;
+      line-height: 1.7;
+    }
+    nav, footer {
+      background: #fff;
+      border-bottom: 1px solid #e2e5eb;
+      padding: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    nav a, footer a {
+      color: #586579;
+      text-decoration: none;
+      margin-right: 14px;
+      font-size: 14px;
+    }
+    .brand { font-weight: bold; color: #182235; font-size: 20px; }
+    main { max-width: 900px; margin: 55px auto; padding: 20px; }
+    .card {
+      background: white;
+      padding: 35px;
+      border: 1px solid #e1e5eb;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px #18223508;
+    }
+    .tag { color: #f47721; font-weight: bold; }
+    h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.2; }
+    h2 { margin-top: 30px; }
+    .button {
+      display: inline-block;
+      background: #f47721;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 9px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer { border-top: 1px solid #e2e5eb; border-bottom: 0; }
+    .footer-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: 600px) {
+      main { margin: 25px auto; padding: 14px; }
+      .card { padding: 23px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>About Me</h1>
-  <p>Hi, I'm Shiva Paswan. I am learning Excel and data analysis and building practical projects to improve my skills.</p>
-  <p>This portfolio showcases my learning journey, Excel projects, and data-related work.</p>
-  <p><a href="index.html">Back to Home</a></p>
+  <nav>
+    <a class="brand" href="index.html">🟠 ShivaPortfolio</a>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="index.html#portfolio">Projects</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="card">
+      <span class="tag">ABOUT ME</span>
+      <h1>Hi, I'm Shiva Paswan.</h1>
+      <p>Welcome to my portfolio. I'm learning Excel and data analysis, building practical projects, and improving my technical skills through hands-on work.</p>
+
+      <h2>What I'm Working On</h2>
+      <p>My focus is on Excel, organizing data, solving practical problems, and presenting information clearly. This website showcases my projects and learning journey.</p>
+
+      <h2>My Goal</h2>
+      <p>To keep learning, build useful projects, and develop skills that help me deliver quality work.</p>
+
+      <a class="button" href="index.html#portfolio">Explore My Projects →</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <strong>Shiva Portfolio · 2026</strong>
+      <div>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
