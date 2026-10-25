@@ -3,13 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Shiva Paswan</title>
-  <meta name="description" content="Contact Shiva Paswan for Excel projects, data work, and professional inquiries.">
+  <meta name="description" content="Contact Shiva Paswan for Excel projects, data organization, and professional inquiries.">
+  <meta name="theme-color" content="#f47721">
+  <title>Contact Me | Shiva Paswan Portfolio</title>
+  <link rel="icon" href="favicon.png">
+
+  <style>
+    :root {
+      --orange: #f47721;
+      --ink: #172033;
+      --muted: #687386;
+      --line: #e5e9f0;
+      --bg: #f6f8fb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    a { text-decoration: none; }
+
+    .nav {
+      background: white;
+      border-bottom: 1px solid var(--line);
+      padding: 17px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .brand span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .btn {
+      display: inline-block;
+      background: var(--orange);
+      color: white !important;
+      padding: 12px 19px;
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    .container {
+      width: min(1050px, 90%);
+      margin: auto;
+    }
+
+    .hero {
+      padding: 75px 0 45px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 54px);
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin: 14px 0;
+    }
+
+    h1 span { color: var(--orange); }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: auto;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 22px;
+      padding-bottom: 75px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 30px;
+    }
+
+    .info-card {
+      background: linear-gradient(145deg, #fff2e8, #ffffff);
+      border-color: #f2dfd1;
+    }
+
+    h2 { font-size: 23px; margin: 0 0 10px; }
+    .muted { color: var(--muted); font-size: 14px; }
+
+    .info-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid #f0e3da;
+    }
+
+    .info-item:last-child { border-bottom: 0; }
+
+    .icon {
+      min-width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: #ffe8d7;
+      color: var(--orange);
+      display: grid;
+      place-items: center;
+      font-size: 21px;
+    }
+
+    .info-item strong { font-size: 14px; }
+    .info-item p { margin: 4px 0; color: var(--muted); font-size: 13px; }
+    .email { color: var(--orange); font-weight: 700; font-size: 13px; overflow-wrap: anywhere; }
+
+    .field { margin-top: 19px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 7px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #dfe4ec;
+      border-radius: 9px;
+      font: inherit;
+      font-size: 14px;
+      background: white;
+      color: var(--ink);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid #f4772133;
+      border-color: var(--orange);
+    }
+
+    textarea { min-height: 130px; resize: vertical; }
+
+    button {
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 21px;
+      font-family: inherit;
+    }
+
+    .note { font-size: 11px; color: var(--muted); margin-top: 12px; }
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--line);
+      padding: 27px 5%;
+    }
+
+    .footer-inner {
+      max-width: 1050px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner strong { font-size: 15px; }
+    .footer-inner p { color: var(--muted); font-size: 12px; margin: 3px 0 0; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .footer-links a { color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 48px; }
+      .card { padding: 23px; }
+      .nav { padding: 16px 5%; }
+      .nav-links { gap: 13px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Contact Me</h1>
-  <p>Have a question or want to discuss a project? Feel free to email me.</p>
-  <a href="mailto:YOUR_EMAIL@gmail.com">Contact Me via Email</a>
-  <p><a href="index.html">Back to Home</a></p>
+  <nav class="nav">
+    <a class="brand" href="index.html"><span>●</span> ShivaPortfolio</a>
+    <div class="nav-links">
+      <a href="index.html#portfolio">Projects</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a class="btn" href="mailto:shivapaswan4561@gmail.com">Email Me ↗</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="hero">
+      <div class="eyebrow">LET'S CONNECT</div>
+      <h1>Let's talk about your <span>project.</span></h1>
+      <p>Have a question or want to discuss an Excel project? Send me a message with your requirements, and I'll get back to you by email.</p>
+    </section>
+
+    <section class="grid">
+      <aside class="card info-card">
+        <h2>Get in touch</h2>
+        <p class="muted">The best way to reach me is by email.</p>
+
+        <div class="info-item">
+          <div class="icon">✉</div>
+          <div>
+            <strong>Email me</strong>
+            <p>For project inquiries and questions.</p>
+            <a class="email" href="mailto:shivapaswan4561@gmail.com">shivapaswan4561@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">↗</div>
+          <div>
+            <strong>View my work</strong>
+            <p>Explore my portfolio and projects.</p>
+            <a class="email" href="index.html#portfolio">Explore projects →</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="icon">✓</div>
+          <div>
+            <strong>Help me understand</strong>
+            <p>Include the task, expected result, and any deadline in your message.</p>
+          </div>
+        </div>
+      </aside>
+
+      <section class="card">
+        <h2>Send an inquiry</h2>
+        <p class="muted">Fill out the details to prepare an email.</p>
+
+        <form id="contactForm">
+          <div class="field">
+            <label for="name">Your name *</label>
+            <input id="name" required maxlength="100" placeholder="Enter your name">
+          </div>
+
+          <div class="field">
+            <label for="email">Your email *</label>
+            <input id="email" type="email" required maxlength="150" placeholder="you@example.com">
+          </div>
+
+          <div class="field">
+            <label for="service">What do you need? *</label>
+            <select id="service" required>
+              <option value="">Select an option</option>
+              <option>Excel work</option>
+              <option>Data entry and organization</option>
+              <option>Data analysis project</option>
+              <option>Other inquiry</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="details">Message *</label>
+            <textarea id="details" required maxlength="3000" placeholder="Describe your requirements..."></textarea>
+          </div>
+
+          <button class="btn" type="submit">Prepare Email →</button>
+          <p class="note">This form opens your email application. It does not send or store messages on this website.</p>
+          <p id="status" class="muted" role="status"></p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <strong>Shiva Portfolio</strong>
+        <p>Excel &amp; Data Projects · 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const service = document.getElementById("service").value;
+      const details = document.getElementById("details").value.trim();
+
+      const subject = encodeURIComponent("Portfolio inquiry: " + service);
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Reply email: " + email + "\n" +
+        "Service: " + service + "\n\n" +
+        "Message:\n" + details
+      );
+
+      document.getElementById("status").textContent = "Opening your email application...";
+      window.location.href =
+        "mailto:shivapaswan4561@gmail.com?subject=" + subject + "&body=" + body;
+    });
+  </script>
 </body>
 </html>
