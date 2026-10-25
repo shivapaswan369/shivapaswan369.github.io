@@ -3,103 +3,437 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about Shiva Paswan, his Excel skills, data projects, and professional journey.">
-  <title>About Me | Shiva Portfolio</title>
+  <meta name="description" content="Discover Shiva Paswan's Excel projects, data skills, learning journey, and portfolio.">
+  <meta name="theme-color" content="#f47721">
+  <title>About Me | Shiva Paswan Portfolio</title>
   <link rel="icon" href="favicon.png">
+
   <style>
+    :root {
+      --orange: #f47721;
+      --ink: #172033;
+      --muted: #687386;
+      --line: #e5e9f0;
+      --bg: #f6f8fb;
+      --white: #fff;
+    }
+
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f6f7f9;
-      color: #182235;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
       line-height: 1.7;
     }
-    nav, footer {
-      background: #fff;
-      border-bottom: 1px solid #e2e5eb;
-      padding: 20px;
-    }
-    nav {
+
+    a { text-decoration: none; }
+
+    .nav {
+      background: rgba(255,255,255,.96);
+      border-bottom: 1px solid var(--line);
+      padding: 17px 6%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 16px;
+      gap: 20px;
       flex-wrap: wrap;
     }
-    nav a, footer a {
-      color: #586579;
-      text-decoration: none;
-      margin-right: 14px;
-      font-size: 14px;
+
+    .brand {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink);
     }
-    .brand { font-weight: bold; color: #182235; font-size: 20px; }
-    main { max-width: 900px; margin: 55px auto; padding: 20px; }
+
+    .brand span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 23px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+
+    .nav-cta, .btn-primary {
+      background: var(--orange);
+      color: white !important;
+      padding: 12px 19px;
+      border-radius: 9px;
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 40px;
+      align-items: center;
+      padding: 85px 0 65px;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(38px, 5vw, 62px);
+      line-height: 1.12;
+      letter-spacing: -2px;
+      margin: 17px 0;
+    }
+
+    h1 span { color: var(--orange); }
+
+    .intro {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 610px;
+      margin-bottom: 27px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      padding: 11px 18px;
+      border: 1px solid #d9dee8;
+      color: var(--ink);
+      border-radius: 9px;
+      font-weight: 700;
+    }
+
+    .profile-card {
+      position: relative;
+      background: linear-gradient(145deg, #fff5ed, #ffffff);
+      border: 1px solid #f2dfd1;
+      border-radius: 25px;
+      padding: 30px;
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .profile-mark {
+      width: 84px;
+      height: 84px;
+      border-radius: 23px;
+      display: grid;
+      place-items: center;
+      background: var(--orange);
+      color: white;
+      font-size: 35px;
+      font-weight: 800;
+      box-shadow: 0 12px 28px #f4772133;
+      margin-bottom: 23px;
+    }
+
+    .profile-card h2 { margin: 0; font-size: 23px; }
+    .profile-card p { color: var(--muted); margin: 5px 0 0; }
+    .profile-card::after {
+      content: "";
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      border: 25px solid #f4772112;
+      border-radius: 50%;
+      right: -65px;
+      top: -65px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 75px;
+    }
+
+    .stat {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 23px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 17px;
+      margin-bottom: 4px;
+    }
+
+    .stat span { color: var(--muted); font-size: 13px; }
+
+    .section { padding: 10px 0 65px; }
+
+    .section-heading { margin-bottom: 25px; }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 36px);
+      margin: 8px 0;
+      letter-spacing: -1px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 17px;
+    }
+
     .card {
       background: white;
-      padding: 35px;
-      border: 1px solid #e1e5eb;
+      border: 1px solid var(--line);
       border-radius: 16px;
-      box-shadow: 0 8px 30px #18223508;
+      padding: 25px;
+      transition: transform .2s, box-shadow .2s;
     }
-    .tag { color: #f47721; font-weight: bold; }
-    h1 { font-size: clamp(30px, 5vw, 44px); line-height: 1.2; }
-    h2 { margin-top: 30px; }
-    .button {
-      display: inline-block;
-      background: #f47721;
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px #1720330b;
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: #fff0e5;
+      color: var(--orange);
+      font-size: 22px;
+      margin-bottom: 16px;
+    }
+
+    .card h3 { margin: 0 0 8px; font-size: 18px; }
+    .card p { color: var(--muted); font-size: 14px; margin: 0; }
+
+    .journey {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 30px;
+      margin-bottom: 70px;
+    }
+
+    .journey-item {
+      border-left: 2px solid #ffcfad;
+      padding: 0 0 24px 22px;
+      position: relative;
+    }
+
+    .journey-item:last-child { padding-bottom: 0; }
+
+    .journey-item::before {
+      content: "";
+      position: absolute;
+      left: -7px;
+      top: 7px;
+      width: 12px;
+      height: 12px;
+      background: var(--orange);
+      border-radius: 50%;
+    }
+
+    .journey-item h3 { margin: 0 0 5px; font-size: 17px; }
+    .journey-item p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .cta {
+      background: #172033;
       color: white;
-      padding: 12px 20px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 10px;
+      border-radius: 20px;
+      padding: 38px;
+      margin-bottom: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
     }
-    footer { border-top: 1px solid #e2e5eb; border-bottom: 0; }
+
+    .cta h2 { margin: 0 0 8px; font-size: 27px; }
+    .cta p { color: #c5ccda; margin: 0; }
+
+    footer {
+      background: white;
+      border-top: 1px solid var(--line);
+      padding: 27px 5%;
+    }
+
     .footer-inner {
-      max-width: 1100px;
+      max-width: 1080px;
       margin: auto;
       display: flex;
       justify-content: space-between;
-      gap: 15px;
+      align-items: center;
+      gap: 18px;
       flex-wrap: wrap;
     }
-    @media (max-width: 600px) {
-      main { margin: 25px auto; padding: 14px; }
-      .card { padding: 23px; }
+
+    .footer-inner strong { font-size: 15px; }
+    .footer-inner p { color: var(--muted); font-size: 12px; margin: 3px 0 0; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 16px; }
+    .footer-links a { color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding-top: 55px; gap: 25px; }
+      .profile-card { min-height: 220px; }
+      .stats { grid-template-columns: 1fr; margin-bottom: 55px; }
+      .cards { grid-template-columns: 1fr; }
+      .nav { padding: 16px 5%; }
+      .nav-links { gap: 14px; }
+      .cta { padding: 27px; }
     }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a class="brand" href="index.html">🟠 ShivaPortfolio</a>
-    <div>
-      <a href="index.html">Home</a>
+  <nav class="nav">
+    <a class="brand" href="index.html"><span>●</span> ShivaPortfolio</a>
+    <div class="nav-links">
       <a href="index.html#portfolio">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">My Journey</a>
       <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="contact.html">Hire Me ↗</a>
     </div>
   </nav>
 
-  <main>
-    <section class="card">
-      <span class="tag">ABOUT ME</span>
-      <h1>Hi, I'm Shiva Paswan.</h1>
-      <p>Welcome to my portfolio. I'm learning Excel and data analysis, building practical projects, and improving my technical skills through hands-on work.</p>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">A little about me</div>
+        <h1>Learning today.<br>Building for <span>tomorrow.</span></h1>
+        <p class="intro">
+          Hi, I'm Shiva Paswan. I'm developing my skills in Excel, data
+          organization, and practical problem-solving through hands-on projects.
+          This portfolio is where I share my work and progress.
+        </p>
+        <div class="buttons">
+          <a class="btn-primary" href="index.html#portfolio">Explore Projects →</a>
+          <a class="btn-secondary" href="contact.html">Contact Me</a>
+        </div>
+      </div>
 
-      <h2>What I'm Working On</h2>
-      <p>My focus is on Excel, organizing data, solving practical problems, and presenting information clearly. This website showcases my projects and learning journey.</p>
+      <div class="profile-card">
+        <div class="profile-mark">S</div>
+        <h2>Shiva Paswan</h2>
+        <p>Excel &amp; Data Portfolio</p>
+        <p>Curious mind · Practical learning</p>
+      </div>
+    </section>
 
-      <h2>My Goal</h2>
-      <p>To keep learning, build useful projects, and develop skills that help me deliver quality work.</p>
+    <section class="stats">
+      <div class="stat">
+        <strong>Excel</strong>
+        <span>Spreadsheets and data organization</span>
+      </div>
+      <div class="stat">
+        <strong>Data Projects</strong>
+        <span>Practice through real examples</span>
+      </div>
+      <div class="stat">
+        <strong>Continuous Learning</strong>
+        <span>Improving one project at a time</span>
+      </div>
+    </section>
 
-      <a class="button" href="index.html#portfolio">Explore My Projects →</a>
+    <section class="section" id="skills">
+      <div class="section-heading">
+        <div class="eyebrow">What I focus on</div>
+        <h2>Skills &amp; Interests</h2>
+        <p>The areas I'm learning and developing through practice.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">▦</div>
+          <h3>Microsoft Excel</h3>
+          <p>Working with spreadsheets, formulas, data organization, and clear reports.</p>
+        </article>
+        <article class="card">
+          <div class="icon">⌕</div>
+          <h3>Data Organization</h3>
+          <p>Arranging information into structured formats that are easier to understand.</p>
+        </article>
+        <article class="card">
+          <div class="icon">↗</div>
+          <h3>Project Building</h3>
+          <p>Practising skills by building projects and documenting my progress.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="journey">
+      <div class="section-heading">
+        <div class="eyebrow">My progress</div>
+        <h2>The Learning Journey</h2>
+        <p>A practical approach to improving my skills.</p>
+      </div>
+
+      <div class="journey">
+        <div class="journey-item">
+          <h3>Learn the fundamentals</h3>
+          <p>Build a solid foundation in spreadsheets, formulas, and data handling.</p>
+        </div>
+        <div class="journey-item">
+          <h3>Practise through projects</h3>
+          <p>Apply what I learn to small, useful projects and improve them over time.</p>
+        </div>
+        <div class="journey-item">
+          <h3>Keep improving</h3>
+          <p>Review my work, learn new techniques, and make each project clearer and more useful.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2>Have a project in mind?</h2>
+        <p>Let's discuss what you need and the result you're looking for.</p>
+      </div>
+      <a class="btn-primary" href="contact.html">Get in Touch →</a>
     </section>
   </main>
 
   <footer>
     <div class="footer-inner">
-      <strong>Shiva Portfolio · 2026</strong>
       <div>
+        <strong>Shiva Portfolio</strong>
+        <p>Excel &amp; Data Projects · 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Projects</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
         <a href="privacy.html">Privacy Policy</a>
