@@ -195,5 +195,10 @@ document.getElementById("year").textContent=new Date().getFullYear();
 if(setupClient()){supabaseClient.auth.onAuthStateChange(()=>{setTimeout(()=>checkAdmin(),0)});loadPublicProjects()}else{projects=demos.map(p=>({...p}));render()}
 
 </script>
+  <footer>
+  <a href="about.html">About</a> |
+  <a href="contact.html">Contact</a> |
+  <a href="privacy.html">Privacy Policy</a>
+</footer>
 </body>
 </html>
