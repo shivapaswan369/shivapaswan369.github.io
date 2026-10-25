@@ -2,29 +2,429 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | Shiva Paswan</title>
-  <meta name="description" content="Read the privacy policy for Shiva Paswan's Excel and Data Portfolio website.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Privacy Policy | Shiva's Portfolio</title>
+  <meta name="description" content="Read the privacy policy for Shiva's Excel and Data Portfolio website. Learn about analytics, cookies, and data collection.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://shivapaswan369.github.io/privacy.html">
+
+  <style>
+    :root {
+      --orange: #f97316;
+      --dark: #172033;
+      --muted: #667085;
+      --line: #e8eaf0;
+      --light: #fff7ed;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #fff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1080px, 90%);
+      margin: auto;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+    }
+
+    .logo span { color: var(--orange); }
+
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: #475467;
+    }
+
+    .nav-links a:hover,
+    .footer-links a:hover {
+      color: var(--orange);
+    }
+
+    .hero {
+      background: var(--light);
+      padding: 68px 0 60px;
+      border-bottom: 1px solid #ffead5;
+    }
+
+    .eyebrow {
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 11px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 6vw, 54px);
+      line-height: 1.15;
+      letter-spacing: -1.8px;
+      max-width: 750px;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 15px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 50px;
+      padding-top: 55px;
+      padding-bottom: 75px;
+      align-items: start;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 24px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fff;
+    }
+
+    .sidebar h3 {
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar a {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      padding: 7px 0;
+    }
+
+    .sidebar a:hover { color: var(--orange); }
+
+    .policy-section {
+      scroll-margin-top: 25px;
+      margin-bottom: 35px;
+    }
+
+    .policy-section h2 {
+      font-size: 23px;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+    }
+
+    .policy-section p,
+    .policy-section li {
+      color: #596579;
+      font-size: 14px;
+    }
+
+    .policy-section p { margin-bottom: 12px; }
+
+    .policy-section ul {
+      padding-left: 22px;
+      margin: 12px 0;
+    }
+
+    .notice {
+      background: var(--light);
+      border: 1px solid #ffead5;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .notice p { margin: 0; }
+
+    .updated {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 6px 12px;
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 22px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 28px 0;
+    }
+
+    .foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .foot p {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font-size: 11px;
+      color: #667080;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        padding: 17px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links { gap: 15px; }
+
+      .hero { padding: 48px 0; }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-top: 35px;
+      }
+
+      .sidebar { position: static; }
+
+      .policy-section h2 { font-size: 21px; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Privacy Policy</h1>
-  <p>Last updated: October 2026</p>
 
-  <h2>Information We Collect</h2>
-  <p>This website does not ask visitors to provide personal information directly. If you contact me by email, I may receive the information you choose to share.</p>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="index.html">Shiva<span>.</span></a>
 
-  <h2>Cookies and Analytics</h2>
-  <p>This website may use Google Analytics to understand website traffic and improve the user experience. Analytics may use cookies or similar technologies.</p>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#portfolio">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <h2>Advertising</h2>
-  <p>If advertising services such as Google AdSense are added in the future, they may use cookies or similar technologies to serve and measure ads, subject to their policies and your settings.</p>
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">Transparency & Privacy</div>
+      <h1>Your privacy <span style="color:#f97316">matters.</span></h1>
+      <p>
+        This Privacy Policy explains what information may be collected
+        when you visit Shiva's Portfolio and how that information is used.
+      </p>
+      <span class="updated">Last updated: October 25, 2026</span>
+    </div>
+  </header>
 
-  <h2>Third-Party Services</h2>
-  <p>Third-party services used on this website have their own privacy policies and data practices.</p>
+  <main class="container content">
 
-  <h2>Contact</h2>
-  <p>For privacy questions, contact: <a href="mailto:shivapaswan.work@gmail.com">Email me</a></p>
+    <aside class="sidebar">
+      <h3>On this page</h3>
+      <a href="#overview">Overview</a>
+      <a href="#information">Information We Collect</a>
+      <a href="#analytics">Analytics & Cookies</a>
+      <a href="#usage">How Information Is Used</a>
+      <a href="#third-party">Third-Party Services</a>
+      <a href="#security">Data Security</a>
+      <a href="#rights">Your Choices</a>
+      <a href="#contact">Contact</a>
+    </aside>
 
-  <p><a href="index.html">Back to Home</a></p>
+    <div class="policy">
+
+      <section class="policy-section" id="overview">
+        <h2>01. Overview</h2>
+        <p>
+          Welcome to Shiva's Portfolio, a personal website showcasing
+          Excel projects, data organization work, and learning progress.
+          Your privacy is important to us. This policy describes the
+          information practices associated with this website.
+        </p>
+      </section>
+
+      <section class="policy-section" id="information">
+        <h2>02. Information We Collect</h2>
+        <p>
+          You can browse most of this website without directly providing
+          personal information. However, certain information may be
+          processed when you interact with the website.
+        </p>
+        <ul>
+          <li><strong>Usage data:</strong> Pages visited, approximate location, device type, browser, and referral source, where analytics services provide this information.</li>
+          <li><strong>Contact information:</strong> If you email us, we may receive your email address and the information you choose to include in your message.</li>
+          <li><strong>Technical data:</strong> Basic technical information may be processed by the website hosting provider to deliver and protect the site.</li>
+        </ul>
+        <p>
+          Please do not send passwords, payment details, or other sensitive
+          personal information through general contact messages.
+        </p>
+      </section>
+
+      <section class="policy-section" id="analytics">
+        <h2>03. Analytics & Cookies</h2>
+        <p>
+          This website may use Google Analytics to understand website
+          traffic, visitor interactions, and which pages are useful.
+          Analytics may use cookies or similar technologies, depending
+          on the service configuration.
+        </p>
+        <p>
+          Google Analytics data is processed under Google's applicable
+          terms and privacy policies. You can learn more at
+          <a href="https://policies.google.com/privacy"
+             target="_blank" rel="noopener noreferrer"
+             style="color:#f97316">Google's Privacy Policy</a>.
+        </p>
+        <p>
+          You can manage cookies through your browser settings. Blocking
+          some cookies may affect certain website features.
+        </p>
+      </section>
+
+      <section class="policy-section" id="usage">
+        <h2>04. How Information Is Used</h2>
+        <p>Information, where collected, may be used to:</p>
+        <ul>
+          <li>Operate and maintain the website.</li>
+          <li>Understand visitor activity and improve website content.</li>
+          <li>Respond to messages and enquiries.</li>
+          <li>Detect technical issues, misuse, or security threats.</li>
+        </ul>
+        <p>
+          We do not claim to sell your personal information. Information
+          may be processed by service providers as needed to operate the site.
+        </p>
+      </section>
+
+      <section class="policy-section" id="third-party">
+        <h2>05. Third-Party Services</h2>
+        <p>
+          This website is hosted through GitHub Pages and may use Google
+          Analytics. These providers may process technical or usage
+          information according to their own policies.
+        </p>
+        <p>
+          External links may lead to websites that we do not control.
+          Please review their privacy policies before sharing information
+          with them.
+        </p>
+        <ul>
+          <li><a href="https://docs.github.com/en/site-policy/privacy-policies"
+                 target="_blank" rel="noopener noreferrer"
+                 style="color:#f97316">GitHub Privacy Policies</a></li>
+          <li><a href="https://policies.google.com/privacy"
+                 target="_blank" rel="noopener noreferrer"
+                 style="color:#f97316">Google Privacy Policy</a></li>
+        </ul>
+      </section>
+
+      <section class="policy-section" id="security">
+        <h2>06. Data Security & Retention</h2>
+        <p>
+          Reasonable steps are taken to keep the website operating safely.
+          However, no website or method of electronic transmission can be
+          guaranteed to be completely secure.
+        </p>
+        <p>
+          Information handled by third-party services is retained according
+          to their respective settings, policies, and retention practices.
+          Emails may remain in inboxes or backups until deleted.
+        </p>
+      </section>
+
+      <section class="policy-section" id="rights">
+        <h2>07. Your Choices</h2>
+        <p>
+          You may choose not to send personal information and can manage
+          cookies through your browser. Depending on the applicable law,
+          you may have additional rights concerning your personal data.
+        </p>
+        <div class="notice">
+          <p>
+            This policy should accurately reflect the services actually
+            enabled on the website. If advertising, embedded content, or
+            additional analytics tools are added later, this policy may
+            need to be updated.
+          </p>
+        </div>
+      </section>
+
+      <section class="policy-section" id="contact">
+        <h2>08. Contact</h2>
+        <p>
+          If you have a question about this Privacy Policy, contact us
+          using the details below or visit the Contact page.
+        </p>
+        <p>
+          Email: <a href="contact.html" style="color:#f97316">
+          Contact Shiva</a>
+        </p>
+        <p>
+          <a href="contact.html"
+             style="display:inline-block;background:#f97316;color:white;padding:10px 18px;border-radius:8px;font-size:13px;font-weight:bold">
+            Contact Me →
+          </a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>© 2026 Shiva's Portfolio. Built with HTML, CSS & JavaScript.</p>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
