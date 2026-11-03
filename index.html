@@ -67,7 +67,7 @@ section.content{padding:78px 0}.section-head{text-align:center;max-width:640px;m
 <div class="hero-actions"><a class="btn primary" href="#portfolio">View My Projects&nbsp; →</a><a class="btn outline" href="#contact">Hire Me</a></div>
 </div></section>
 <div class="wrap stats">
-<div class="stat"><div class="stat-icon">▣</div><div><strong id="statProjects">01</strong><span>PORTFOLIO SAMPLES</span></div></div>
+<div class="stat"><div class="stat-icon">▣</div><div><strong id="statProjects">03</strong><span>PORTFOLIO SAMPLES</span></div></div>
 <div class="stat"><div class="stat-icon">▤</div><div><strong>Excel</strong><span>SPREADSHEET TOOLS</span></div></div>
 <div class="stat"><div class="stat-icon">♧</div><div><strong>Fictional</strong><span>SAMPLE DATA</span></div></div>
 <div class="stat"><div class="stat-icon">✉</div><div><strong>Direct</strong><span>CLIENT COMMUNICATION</span></div></div>
@@ -81,9 +81,9 @@ section.content{padding:78px 0}.section-head{text-align:center;max-width:640px;m
 <article class="card service"><div class="service-icon">▥</div><h3>Simple Charts &amp; Summaries</h3><p>Create basic charts from organized data when the task calls for them.</p></article>
 <article class="card service"><div class="service-icon">⇩</div><h3>PDF / CSV Table Conversion</h3><p>Convert selectable table data into structured spreadsheets. Scanned PDFs need separate review.</p></article>
 </div></div></section>
-<section class="content portfolio" id="portfolio"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Featured Projects</h2><p>One documented demonstration using fictional customer records, with raw and cleaned files available to inspect.</p></div>
+<section class="content portfolio" id="portfolio"><div class="wrap"><div class="section-head"><div class="eyebrow">Selected work</div><h2>Featured Projects</h2><p>Three documented practice demonstrations using fictional customer, sales and expense records. Download sample data and review each case study.</p></div>
 <div class="toolbar"><input id="search" type="search" placeholder="Search projects..." aria-label="Search projects"><div class="filters"><button class="filter active" data-filter="All">All projects</button><button class="filter" data-filter="Reports">Reports</button><button class="filter" data-filter="Data Cleaning">Data Cleaning</button><button class="filter" data-filter="Management">Management</button></div></div>
-<div class="cards" id="projectGrid"></div><p class="small muted">All records are fictional. This is a self-created practice demonstration, not paid client work.</p>
+<div class="cards" id="projectGrid"></div><p class="small muted">All datasets are fictional. These are self-created practice demonstrations, not paid client work.</p>
 </div></section>
 <section class="content"><div class="wrap"><div class="section-head"><div class="eyebrow">Simple workflow</div><h2>How I Work</h2><p>Clear expectations, practical work and agreed deliverables.</p></div><div class="steps">
 <div class="step"><div class="num">01</div><h3>Understand</h3><p>Discuss the problem and the result you need.</p></div><div class="step"><div class="num">02</div><h3>Plan</h3><p>Confirm scope, timeline and deliverables.</p></div><div class="step"><div class="num">03</div><h3>Organize</h3><p>Clean, structure or analyze the supplied data.</p></div><div class="step"><div class="num">04</div><h3>Deliver</h3><p>Review the result and deliver the agreed files.</p></div>
@@ -126,7 +126,9 @@ const CONFIG={
   supabaseAnonKey:"sb_publishable_HzlCdJyT8PD0q2QmwPgN5g_RsYQQ6k1"
 };
 const demos=[
-{id:"demo-clean",title:"Customer Data Cleanup",category:"Data Cleaning",description:"Cleaned 25 fictional customer records: standardized names, emails, dates and payment statuses, removed 2 duplicate rows, and flagged a missing phone value.",tags:["Excel","Data Cleaning","Duplicates","Formatting"],file_url:"samples/cleaned-customer-data.csv",raw_url:"samples/raw-customer-data.csv",details_url:"samples/excel-data-cleaning.html",demo:true}
+{id:"demo-clean",title:"Customer Data Cleanup",category:"Data Cleaning",description:"Cleaned 25 fictional customer records: standardized names, emails, dates and payment statuses, removed 2 duplicate rows, and flagged a missing phone value.",tags:["Excel","Data Cleaning","Duplicates","Formatting"],file_url:"samples/cleaned-customer-data.csv",file_label:"Download cleaned CSV",raw_url:"samples/raw-customer-data.csv",details_url:"samples/excel-data-cleaning.html",demo:true},
+{id:"demo-sales",title:"Sales Data Analysis",category:"Reports",description:"Analyzed 24 fictional sales orders: calculated revenue, cost, profit, average order value and monthly revenue summaries.",tags:["Excel","SUMIFS","KPI Summary","Reports"],file_url:"samples/sales-raw-data.csv",file_label:"Download sample CSV",details_url:"samples/sales-data-analysis.html",demo:true},
+{id:"demo-expenses",title:"Business Expense Tracker",category:"Management",description:"Organized 24 fictional expenses, summarized paid and pending amounts, and compared category spending with illustrative five-month budgets.",tags:["Excel","Expense Tracking","SUMIF","Budget Comparison"],file_url:"samples/expense-raw-data.csv",file_label:"Download sample CSV",details_url:"samples/business-expense-tracker.html",demo:true}
 ];
 
 const KEY="shiva_portfolio_secure_v1";
@@ -137,7 +139,7 @@ function preview(){return '<div class="sheet"><div class="sheet-title">SPREADSHE
 function render(){
  const q=document.getElementById("search").value.toLowerCase().trim();
  const list=projects.filter(p=>(filter==="All"||p.category===filter)&&[p.title,p.description,p.category,...(p.tags||[])].join(" ").toLowerCase().includes(q));
- document.getElementById("projectGrid").innerHTML=list.length?list.map(p=>'<article class="card"><div class="project-cover">'+preview()+'</div><div class="project-body"><span class="category">'+esc(p.category)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.description)+'</p><div class="tags">'+(p.tags||[]).map(t=>'<span class="tag">'+esc(t)+'</span>').join("")+'</div><div class="project-actions">'+(p.file_url?'<a class="btn primary" href="'+esc(p.file_url)+'" download>Download cleaned CSV</a>':'')+(p.raw_url?'<a class="btn outline" href="'+esc(p.raw_url)+'" download>Download raw CSV</a>':'')+(p.details_url?'<a class="btn outline" href="'+esc(p.details_url)+'">Case study</a>':'')+'</div><p class="note">'+(p.demo?"Fictional-data demonstration":"Portfolio project")+'</p></div></article>').join(""):'<div class="empty">No published projects found.</div>';
+ document.getElementById("projectGrid").innerHTML=list.length?list.map(p=>'<article class="card"><div class="project-cover">'+preview()+'</div><div class="project-body"><span class="category">'+esc(p.category)+'</span><h3>'+esc(p.title)+'</h3><p>'+esc(p.description)+'</p><div class="tags">'+(p.tags||[]).map(t=>'<span class="tag">'+esc(t)+'</span>').join("")+'</div><div class="project-actions">'+(p.file_url?'<a class="btn primary" href="'+esc(p.file_url)+'" download>'+esc(p.file_label||"Download cleaned CSV")+'</a>':'')+(p.raw_url?'<a class="btn outline" href="'+esc(p.raw_url)+'" download>Download raw CSV</a>':'')+(p.details_url?'<a class="btn outline" href="'+esc(p.details_url)+'">Case study</a>':'')+'</div><p class="note">'+(p.demo?"Fictional-data demonstration":"Portfolio project")+'</p></div></article>').join(""):'<div class="empty">No published projects found.</div>';
  document.getElementById("statProjects").textContent=String(list.length).padStart(2,"0");
 }
 function setStatus(id,msg){const el=document.getElementById(id);if(el)el.textContent=msg}
