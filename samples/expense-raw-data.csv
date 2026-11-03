@@ -1,0 +1,25 @@
+Expense ID,Date,Category,Vendor,Description,Amount (USD),Payment Method,Status
+EXP-2001,2026-01-07,Travel,CityCab Travel,Travel expense,361.7,Card,Paid
+EXP-2002,2026-01-13,Utilities,BrightPower Utilities,Utilities expense,382.52,Cash,Paid
+EXP-2003,2026-01-19,Rent,Northstar Workspace,Rent expense,105.12,Bank Transfer,Paid
+EXP-2004,2026-01-25,Internet,FiberNet,Internet expense,536.03,Bank Transfer,Pending
+EXP-2005,2026-01-31,Travel,CityCab Travel,Travel expense,567.36,Cash,Paid
+EXP-2006,2026-02-06,Marketing,MarketPilot Ads,Marketing expense,525.02,Bank Transfer,Paid
+EXP-2007,2026-02-12,Marketing,MarketPilot Ads,Marketing expense,69.9,Bank Transfer,Paid
+EXP-2008,2026-02-18,Travel,CityCab Travel,Travel expense,191.29,Bank Transfer,Paid
+EXP-2009,2026-02-24,Marketing,MarketPilot Ads,Marketing expense,288.5,Bank Transfer,Paid
+EXP-2010,2026-03-02,Software,CloudDesk Tools,Software expense,358.24,Cash,Paid
+EXP-2011,2026-03-08,Internet,FiberNet,Internet expense,125.52,Cash,Paid
+EXP-2012,2026-03-14,Office Supplies,Paper & Pen Store,Office Supplies expense,568.44,Card,Paid
+EXP-2013,2026-03-20,Office Supplies,Paper & Pen Store,Office Supplies expense,165.54,Card,Pending
+EXP-2014,2026-03-26,Internet,FiberNet,Internet expense,280.61,Bank Transfer,Paid
+EXP-2015,2026-04-01,Travel,CityCab Travel,Travel expense,639.9,Card,Paid
+EXP-2016,2026-04-07,Meals,Corner Cafe,Meals expense,185.49,Cash,Paid
+EXP-2017,2026-04-13,Meals,Corner Cafe,Meals expense,584.16,Bank Transfer,Paid
+EXP-2018,2026-04-19,Internet,FiberNet,Internet expense,60.9,Bank Transfer,Pending
+EXP-2019,2026-04-25,Travel,CityCab Travel,Travel expense,338.75,Card,Paid
+EXP-2020,2026-05-01,Travel,CityCab Travel,Travel expense,346.11,Card,Paid
+EXP-2021,2026-05-07,Office Supplies,Paper & Pen Store,Office Supplies expense,413.88,Card,Paid
+EXP-2022,2026-05-13,Meals,Corner Cafe,Meals expense,414.64,Cash,Paid
+EXP-2023,2026-05-19,Software,CloudDesk Tools,Software expense,77.83,Bank Transfer,Pending
+EXP-2024,2026-05-25,Rent,Northstar Workspace,Rent expense,118.99,Bank Transfer,Paid
