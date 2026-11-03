@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Excel Customer Data Cleanup Sample | Shiva Paswan</title>
+<meta name="description" content="A fictional-data Excel cleanup demonstration showing duplicate handling, text and date standardization, and missing-value flags.">
+<link rel="canonical" href="https://shivapaswan369.github.io/samples/excel-data-cleaning.html">
+<style>
+:root{--ink:#172033;--muted:#667085;--orange:#f47721;--line:#e7eaf0;--paper:#f7f8fa}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Arial,sans-serif}
+.wrap{width:min(900px,92%);margin:auto}header{background:#fff;border-bottom:1px solid var(--line);padding:18px 0}
+a{color:var(--orange);font-weight:700;text-decoration:none}.hero{padding:56px 0 28px}.eyebrow{color:var(--orange);font-size:12px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.12;letter-spacing:-1.5px;margin:10px 0}
+p{color:var(--muted)}.notice{background:#fff7ed;border:1px solid #f5d7bd;border-radius:10px;padding:14px;color:#854d0e;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:22px 0}.metric,.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:18px}
+.metric strong{display:block;font-size:28px}.metric span{font-size:12px;color:var(--muted)}
+h2{font-size:22px;margin:28px 0 8px}.panel ul{padding-left:20px;color:var(--muted)}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0 30px}.btn{display:inline-block;background:var(--orange);color:#fff;padding:11px 16px;border-radius:8px}.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--line)}
+footer{border-top:1px solid var(--line);padding:22px 0;margin-top:38px;font-size:13px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}.hero{padding-top:38px}}
+</style></head>
+<body><header><div class="wrap"><a href="../index.html">← Back to Shiva's portfolio</a></div></header>
+<main class="wrap"><section class="hero"><div class="eyebrow">Excel practice project</div>
+<h1>Customer Data Cleanup</h1>
+<p>A small before-and-after demonstration of organizing inconsistent customer records in a spreadsheet.</p>
+<div class="notice"><strong>Practice sample only:</strong> All records are fictional. This is self-created demonstration work, not a paid client project. Email addresses use example.com test domains.</div>
+<div class="grid">
+<div class="metric"><strong>25</strong><span>Raw records</span></div>
+<div class="metric"><strong>2</strong><span>Duplicate rows removed</span></div>
+<div class="metric"><strong>23</strong><span>Unique records in cleaned file</span></div>
+</div></section>
+<section class="panel"><h2>What was inconsistent?</h2><ul>
+<li>Names and email addresses had mixed capitalization and extra spaces.</li>
+<li>Dates used several formats.</li><li>Payment statuses had inconsistent capitalization and trailing spaces.</li>
+<li>Some phone values were missing.</li><li>Two repeated records were identified by normalized email address.</li>
+</ul></section>
+<section class="panel"><h2>Cleanup steps</h2><ul>
+<li>Trimmed unnecessary spaces and standardized customer-name capitalization.</li>
+<li>Converted email addresses to lowercase.</li><li>Standardized dates to YYYY-MM-DD.</li>
+<li>Standardized payment-status capitalization.</li><li>Removed two duplicate records using normalized email as the matching key.</li>
+<li>Kept the missing phone value visible as “Not provided” rather than guessing it.</li>
+</ul></section>
+<section class="panel"><h2>Files</h2><p>Download the original practice data and the cleaned result. Both files are CSV and open in Microsoft Excel, LibreOffice Calc, and Google Sheets.</p>
+<div class="actions"><a class="btn" href="cleaned-customer-data.csv" download>Download cleaned data</a><a class="btn alt" href="raw-customer-data.csv" download>Download raw data</a></div></section>
+<section class="panel"><h2>Scope and limitations</h2><ul>
+<li>This example demonstrates basic data cleanup and formatting only.</li><li>Email values were normalized, not verified as deliverable.</li>
+<li>Duplicate matching used normalized email addresses; ambiguous conflicts were not researched against real sources.</li>
+<li>No live business data, customer system, macros, VBA, or automated refresh is involved.</li>
+</ul></section>
+</main><footer><div class="wrap">© 2026 Shiva Paswan · <a href="../index.html">Portfolio home</a> · <a href="../contact.html">Contact</a></div></footer>
+</body></html>
