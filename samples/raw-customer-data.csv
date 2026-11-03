@@ -1,0 +1,26 @@
+Customer Name,Email,Phone,Record Date,Payment Status
+  john smith ,JOHN.SMITH@EXAMPLE.COM ,  98765 43210,2026/10/02,Pending
+Priya Sharma,priya.sharma@example.com,9876543211,02-10-2026,Paid
+ALEX JOHNSON,alex.johnson@example.com,9876543212,"Oct 3, 2026",pending
+Maria Garcia,maria.garcia@example.com,,2026-10-04,Paid
+John Smith,john.smith@example.com,9876543210,2026-10-02,Pending
+  David Lee,DAVID.LEE@EXAMPLE.COM,9876543214,05/10/2026,Overdue
+Fatima Khan,fatima.khan@example.com,9876543215,2026-10-06,paid
+Oliver Brown,oliver.brown@example.com,9876543216,2026-10-07,Pending 
+Sofia Martinez,sofia.martinez@example.com,9876543217,08-10-2026,Overdue
+Noah Wilson,noah.wilson@example.com,9876543218,2026-10-09,Paid
+Emma Davis,emma.davis@example.com,9876543219,10 Oct 2026,pending
+Liam Taylor,liam.taylor@example.com,9876543220,2026-10-11,Paid
+Ava Anderson,ava.anderson@example.com,9876543221,12/10/2026,Overdue
+Mia Thomas,mia.thomas@example.com,9876543222,2026-10-13,Paid
+Ethan Moore,ethan.moore@example.com,9876543223,14-10-2026,Pending
+Isabella Martin,isabella.martin@example.com,9876543224,2026-10-15,paid
+Lucas Jackson,lucas.jackson@example.com,9876543225,2026-10-16,Overdue
+Amelia White,amelia.white@example.com,9876543226,17 Oct 2026,Pending
+Mason Harris,mason.harris@example.com,9876543227,2026-10-18,Paid
+Charlotte Clark,charlotte.clark@example.com,9876543228,19/10/2026,overdue
+  Ethan Moore , ETHAN.MOORE@EXAMPLE.COM ,9876543223,14-10-2026,Pending
+Harper Lewis,harper.lewis@example.com,9876543229,2026-10-20,Paid
+Benjamin Walker,benjamin.walker@example.com,9876543230,21 Oct 2026,Pending
+Ella Hall,ella.hall@example.com,9876543231,2026-10-22,Overdue
+James Allen,james.allen@example.com,9876543232,23/10/2026,Paid
