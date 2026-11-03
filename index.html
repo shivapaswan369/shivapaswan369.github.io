@@ -152,7 +152,8 @@ function setupClient(){
 async function loadPublicProjects(){
  if(!supabaseClient){projects=demos.map(p=>({...p}));render();return}
  const {data,error}=await supabaseClient.from("portfolio_projects").select("id,title,category,description,tags,file_path,published").eq("published",true).order("created_at",{ascending:false});
- if(error){console.error(error);projects=demos.map(p=>({...p}));setStatus("authStatus","Database not configured yet. Showing sample projects.");render();return}
+ if(error){console.error(error);projects=demos.map(p=>({...p}));setStatus("authStatus","Showing the public practice sample while the project database is unavailable.");render();return}
+ if(!data || data.length===0){projects=demos.map(p=>({...p}));render();return}
  projects=(data||[]).map(p=>({...p,demo:false,file_url:p.file_path?null:null}));
  // Generate temporary public download URLs only for files in the public portfolio bucket.
  for(const p of projects){if(p.file_path){const {data:pub}=supabaseClient.storage.from("portfolio-files").getPublicUrl(p.file_path);p.file_url=pub?.publicUrl||null}}
