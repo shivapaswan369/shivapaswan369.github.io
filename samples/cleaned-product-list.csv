@@ -1,0 +1,6 @@
+SKU,Product Name,Category,Price,Stock,Review Flag
+A-101,Cotton T-Shirt,Apparel,499,18,Standardized name
+A-102,Canvas Tote Bag,Accessories,299,25,No change
+A-103,Wireless Mouse,Electronics,799,12,Exact duplicate removed
+A-104,Ceramic Mug,Home,199,,Missing stock flagged
+A-105,Notebook Set,Stationery,249,40,No change
